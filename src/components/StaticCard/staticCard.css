@@ -1,0 +1,19 @@
+.static-card-container{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border: 1px solid #000;
+    padding: 1rem;
+}
+
+.header{
+    display: flex;
+    gap: 3px;
+    align-items: baseline;
+    font-size: 1rem;
+}
+.btns-container{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
