@@ -1,9 +1,11 @@
 .static-card-container{
     display: flex;
     flex-direction: column;
-    gap: 5px;
-    border: 1px solid #000;
+    gap: 1rem;
+
+    border-radius: 1rem;
     padding: 1rem;
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
 }
 
 .header{

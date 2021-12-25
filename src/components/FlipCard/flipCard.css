@@ -1,6 +1,6 @@
 .card-container{
-  height: 100px;
-  width: 100px;
+  height: 50%;
+  width: 60%;
 }
 
 
@@ -17,14 +17,18 @@
   height: 100%;
   width: 100%;
   backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
 }
 
 .card__face--front {
-  background: red;
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
 }
 
 .card__face--back {
-  background: blue;
+  background: radial-gradient(circle,rgba(148,187,233,1) 0%,  rgba(238,174,202,1) 100%);
   transform: rotateY( 180deg );
   color: transparent
 }
