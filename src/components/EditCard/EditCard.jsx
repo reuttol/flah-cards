@@ -1,6 +1,6 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
-const EditCard = ({ card , displayUpdateItem, cancel}) => {
+const EditCard = ({ card, displayUpdateItem, cancel }) => {
   const [newCard, setNewCard] = useState({
     question: card.question,
     answer: card.answer,
@@ -12,6 +12,10 @@ const EditCard = ({ card , displayUpdateItem, cancel}) => {
     setNewCard({ ...newCard, [e.target.name]: val });
   };
 
+  const save = () => {
+    setNewCard({ question: "", answer: "", id: "" });
+    displayUpdateItem(newCard);
+  };
   return (
     <div className="static-card-container">
       <div className="header">
@@ -35,8 +39,15 @@ const EditCard = ({ card , displayUpdateItem, cancel}) => {
         />
       </div>
       <div className="btns-container">
-        <button onClick={() => displayUpdateItem(newCard)}>Save</button>
-        <button onClick={() =>{setNewCard(card); cancel()}}>Cancel</button>
+        <button onClick={save}>Save</button>
+        <button
+          onClick={() => {
+            setNewCard(card);
+            cancel();
+          }}
+        >
+          Cancel
+        </button>
       </div>
     </div>
   );

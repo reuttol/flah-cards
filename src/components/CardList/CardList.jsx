@@ -10,6 +10,9 @@ const CardList = ({ allData}) => {
   const [correct, setCorrect] = useState(0);
 
   const nextCard = () => {
+    if(index === allData.length-1)
+      return;
+    
     setShow("");
     if(index < allData.length - 1){
       setIndex(index + 1);
